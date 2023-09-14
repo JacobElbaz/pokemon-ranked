@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "pokemonranked",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authpokemonrankedf2fb52e4",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

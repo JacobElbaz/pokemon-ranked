@@ -1,0 +1,17 @@
+type User @model @auth(rules: [{allow: public, provider: iam}]){
+  id: ID,
+  name: String,
+  email: String, 
+  password: String, 
+  profile_picture: String, 
+  votes: [Vote] @hasMany
+  }
+
+type Vote @model @auth(rules: [{allow: public, provider: iam}]){
+  id: ID,
+  pokemon_name: String,
+  pokemon_id: String, 
+  createdAt: String, 
+  user: User @belongsTo(fields: ["userId"])
+  userId: ID!
+  }

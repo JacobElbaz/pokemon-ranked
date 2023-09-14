@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pokemonranked-dev-194939-authRole",
+      "UnauthRoleArn": "arn:aws:iam::927526594035:role/amplify-pokemonranked-dev-194939-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::927526594035:role/amplify-pokemonranked-dev-194939-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-pokemonranked-dev-194939-deployment",
+      "UnauthRoleName": "amplify-pokemonranked-dev-194939-unauthRole",
+      "StackName": "amplify-pokemonranked-dev-194939",
+      "StackId": "arn:aws:cloudformation:eu-central-1:927526594035:stack/amplify-pokemonranked-dev-194939/5e2cf520-518c-11ee-b2c2-069104f8e03c",
+      "AmplifyAppId": "d3rxvaz57znjcj"
+    },
+    "categories": {
+      "auth": {
+        "pokemonrankedf2fb52e4": {}
+      },
+      "function": {
+        "pokemonrankedLambda": {
+          "deploymentBucketName": "amplify-pokemonranked-dev-194939-deployment",
+          "s3Key": "amplify-builds/pokemonrankedLambda-36454637596f30663364-build.zip"
+        }
+      },
+      "api": {
+        "pokemonranked": {}
+      }
+    }
+  }
+}
