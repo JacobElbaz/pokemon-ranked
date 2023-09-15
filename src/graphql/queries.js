@@ -1,6 +1,16 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const getPokemonVotesCount = /* GraphQL */ `
+  query GetPokemonVotesCount {
+    getPokemonVotesCount {
+      pokemon_id
+      pokemon_name
+      vote_count
+      __typename
+    }
+  }
+`;
 export const getUser = /* GraphQL */ `
   query GetUser($id: ID!) {
     getUser(id: $id) {

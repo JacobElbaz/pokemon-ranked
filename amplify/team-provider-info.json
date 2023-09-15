@@ -18,7 +18,7 @@
       "function": {
         "pokemonrankedLambda": {
           "deploymentBucketName": "amplify-pokemonranked-dev-194939-deployment",
-          "s3Key": "amplify-builds/pokemonrankedLambda-36454637596f30663364-build.zip"
+          "s3Key": "amplify-builds/pokemonrankedLambda-365067784c39494f4961-build.zip"
         }
       },
       "api": {

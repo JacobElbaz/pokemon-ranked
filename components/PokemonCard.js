@@ -3,7 +3,7 @@ import { API } from "aws-amplify";
 import Image from "next/image";
 import React from "react";
 
-function PokemonCard({ pokemon, loading }) {
+function PokemonCard({ pokemon }) {
   const createNewVote = async () => {
     const voteDetails = {
       pokemon_name: pokemon.name,
@@ -31,22 +31,14 @@ function PokemonCard({ pokemon, loading }) {
 
   return (
     <div className="pokemon-card">
-      {loading ? (
-        <>Loading...</>
-      ) : (
-        <>
-          <Image
-            src={pokemon?.sprites.other["official-artwork"].front_default}
-            alt={"Picture of " + pokemon?.name}
-            width={200}
-            height={200}
-          />
-          <h2>
-            {pokemon?.name.charAt(0).toUpperCase() + pokemon?.name.slice(1)}
-          </h2>
-          <button onClick={handleVote}>Vote</button>
-        </>
-      )}
+      <Image
+        src={pokemon?.sprites.other["official-artwork"].front_default}
+        alt={"Picture of " + pokemon?.name}
+        width={200}
+        height={200}
+      />
+      <h2>{pokemon?.name.charAt(0).toUpperCase() + pokemon?.name.slice(1)}</h2>
+      <button onClick={handleVote}>Vote</button>
     </div>
   );
 }

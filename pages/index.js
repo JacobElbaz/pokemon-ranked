@@ -1,5 +1,5 @@
 import PokemonBattle from "@/components/PokemonBattle";
-import { listVotes } from "@/src/graphql/queries";
+import { getPokemonVotesCount } from "@/src/graphql/queries";
 import { API } from "aws-amplify";
 import Head from "next/head";
 import React from "react";
@@ -8,14 +8,17 @@ export default function Home() {
   const [votes, setVotes] = React.useState([]);
 
   const updateVotes = async () => {
+    const runFunction = "runFunction";
+    const runFunctionStringified = JSON.stringify(runFunction);
     try {
       const response = await API.graphql({
-        query: listVotes,
+        query: getPokemonVotesCount,
         authMode: "AWS_IAM",
+        variables: {
+          input: runFunctionStringified,
+        },
       });
       console.log("response", response);
-      const data = response.data.listVotes.items;
-      setVotes(data);
     } catch (error) {
       console.log("error getting the data", error);
     }

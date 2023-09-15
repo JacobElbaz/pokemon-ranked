@@ -15,3 +15,17 @@ type Vote @model @auth(rules: [{allow: public, provider: iam}]){
   user: User @belongsTo(fields: ["userId"])
   userId: ID!
   }
+
+type Query {
+  getPokemonVotesCount: [PokemonVoteCount]
+  @auth(rules: [
+    { allow: public, provider: iam },
+  ])
+  @function(name: "pokemonrankedLambda-${env}")
+}
+
+type PokemonVoteCount {
+  pokemon_id: String!
+  pokemon_name: String!
+  vote_count: Int!
+}

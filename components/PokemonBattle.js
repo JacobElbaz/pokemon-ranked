@@ -21,8 +21,12 @@ function PokemonBattle() {
 
   return (
     <div className="pokemon-battle">
-      <PokemonCard pokemon={pokemonObjectA} loading={loading}/>
-      <PokemonCard pokemon={pokemonObjectB} loading={loading}/>
+      {!loading && (
+        <>
+          <PokemonCard pokemon={pokemonObjectA}/>
+          <PokemonCard pokemon={pokemonObjectB}/>
+        </>
+      )}
     </div>
   );
 }

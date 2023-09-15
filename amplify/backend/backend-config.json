@@ -58,6 +58,15 @@
   "function": {
     "pokemonrankedLambda": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput"
+          ],
+          "category": "api",
+          "resourceName": "pokemonranked"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
